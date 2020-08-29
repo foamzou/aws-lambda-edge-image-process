@@ -1,0 +1,156 @@
+{
+  "Records": [
+    {
+      "cf": {
+        "config": {
+          "distributionDomainName": "xxxxxxxxx.cloudfront.net",
+          "distributionId": "xxxxxxxxxxx",
+          "eventType": "origin-response",
+          "requestId": "FaxzdvQKODwOgXKKLs5w7KvcAdalkBqUJAvZWQd9GArijxxxxxxxx=="
+        },
+        "request": {
+          "clientIp": "111.111.111.111",
+          "headers": {
+            "host": [
+              {
+                "key": "Host",
+                "value": "xxxxxxxxxxx.cloudfront.net"
+              }
+            ],
+            "accept-language": [
+              {
+                "key": "Accept-Language",
+                "value": "zh-CN,zh;q=0.9,en;q=0.8"
+              }
+            ],
+            "accept": [
+              {
+                "key": "Accept",
+                "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"
+              }
+            ],
+            "x-forwarded-for": [
+              {
+                "key": "X-Forwarded-For",
+                "value": "111.111.111.111"
+              }
+            ],
+            "user-agent": [
+              {
+                "key": "User-Agent",
+                "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36"
+              }
+            ],
+            "via": [
+              {
+                "key": "Via",
+                "value": "2.0 11111111111111111111111.cloudfront.net (CloudFront)"
+              }
+            ],
+            "accept-encoding": [
+              {
+                "key": "Accept-Encoding",
+                "value": "gzip"
+              }
+            ],
+            "pragma": [
+              {
+                "key": "Pragma",
+                "value": "no-cache"
+              }
+            ],
+            "upgrade-insecure-requests": [
+              {
+                "key": "upgrade-insecure-requests",
+                "value": "1"
+              }
+            ],
+            "sec-fetch-site": [
+              {
+                "key": "sec-fetch-site",
+                "value": "none"
+              }
+            ],
+            "sec-fetch-mode": [
+              {
+                "key": "sec-fetch-mode",
+                "value": "navigate"
+              }
+            ],
+            "sec-fetch-user": [
+              {
+                "key": "sec-fetch-user",
+                "value": "?1"
+              }
+            ],
+            "sec-fetch-dest": [
+              {
+                "key": "sec-fetch-dest",
+                "value": "document"
+              }
+            ],
+            "cache-control": [
+              {
+                "key": "Cache-Control",
+                "value": "no-cache"
+              }
+            ]
+          },
+          "method": "GET",
+          "origin": {
+            "s3": {
+              "authMethod": "none",
+              "customHeaders": {},
+              "domainName": "your-bucket-name.s3.amazonaws.com",
+              "path": ""
+            }
+          },
+          "querystring": "",
+          "uri": "/foam_test/image/198011463cfebbae6f39f5ff08b5d7a6.jpg@70p_370w_0e_1l_70q.webp"
+        },
+        "response": {
+          "headers": {
+            "x-amz-request-id": [
+              {
+                "key": "x-amz-request-id",
+                "value": "DD6FCD71E1C1A176"
+              }
+            ],
+            "x-amz-id-2": [
+              {
+                "key": "x-amz-id-2",
+                "value": "4Ao1vsWW/0oUjOipNw2EjWPopgVamHyip0TQEmVRLKm183bAJhn/m/mg/lqOyZuifIM6Uf6gwMo="
+              }
+            ],
+            "date": [
+              {
+                "key": "Date",
+                "value": "Mon, 24 Aug 2020 08:22:17 GMT"
+              }
+            ],
+            "server": [
+              {
+                "key": "Server",
+                "value": "AmazonS3"
+              }
+            ],
+            "content-type": [
+              {
+                "key": "Content-Type",
+                "value": "application/xml"
+              }
+            ],
+            "transfer-encoding": [
+              {
+                "key": "Transfer-Encoding",
+                "value": "chunked"
+              }
+            ]
+          },
+          "status": "404",
+          "statusDescription": "Not Found"
+        }
+      }
+    }
+  ]
+}
