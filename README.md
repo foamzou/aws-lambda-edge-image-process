@@ -1,4 +1,4 @@
-English | [简体中文](./README.zh-CN.md)
+Overview | [Instructions](./INSTRUCTIONS.md)
 
 # Best Practices for using Lambda@Edge to process images on AWS
 
