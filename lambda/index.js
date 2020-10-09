@@ -12,7 +12,12 @@ exports.handler = async function(event, context, callback) {
     let cf = event['cf'];
     let ret = await handleOriginResponse(cf['request'], cf['response']);
 
-    callback(null, ret ? ret : cf['response']);
+    let response = ret ? ret : cf['response'];
+    // Support client cache
+    if (response['status'] && response['status'] < 400) {
+        response['headers']['cache-control'] = [{'key': 'Cache-Control', 'value': 'max-age=86400'}]
+    }
+    callback(null, response);
 };
 
 const getBucketNameFromCFRequest = (request) => {
@@ -25,7 +30,7 @@ const getBucketNameFromCFRequest = (request) => {
     if (!domain.includes('.s3.amazonaws.com')) {
         return false;
     }
-    return domain.replace('.s3.amazonaws.com', '');
+    return domain.split('.')[0];
 };
 
 
@@ -79,10 +84,12 @@ const handleOriginResponse = async (request, response) => {
         return false;
     }
 
+    // async upload to s3
     l('upload start')
-    let ret = await uploadToS3(bucketName, saveObjKey, buffer, contentType)
-    l(`upload ret: ${JSON.stringify(ret)}`)
-    l('upload end')
+    uploadToS3(bucketName, saveObjKey, buffer, contentType).then(ret => {
+        l(`upload ret: ${JSON.stringify(ret)}`)
+        l('upload end')
+    });
 
     return generateResponse(response, buffer, contentType)
 };
