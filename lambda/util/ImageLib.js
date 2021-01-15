@@ -79,7 +79,7 @@ const resize = (sharp, option, originImageMeta) => {
     console.log(`resize option: ${JSON.stringify(resizeOption)}`);
 
     if (resizeOption.width || resizeOption.height) {
-        sharp.resize(resizeOption); // https://sharp.pixelplumbing.com/api-resize
+        sharp.resize(resizeOption).withMetadata(); // https://sharp.pixelplumbing.com/api-resize
     }
 };
 
