@@ -1,5 +1,6 @@
 .idea
 .vscode
+.DS_Store
 
 # function zip folder
 *.zip
@@ -7,3 +8,6 @@
 # lambda folder
 lambda/node_modules
 lambda/package-lock.json
+
+# local testing
+lambda/local-resize/images

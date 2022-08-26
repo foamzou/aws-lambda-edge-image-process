@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "aws-sdk": "2.631.0",
-    "sharp": "^0.25.4"
+    "sharp": "^0.25.4",
+    "yargs": "^17.5.1"
   }
 }
